@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한국 코카-콜라</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=0e59b01427966b662099bbccd1f7d561">
+  </script>
+
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var container = document.getElementById('map');
+      var options = {
+        center: new kakao.maps.LatLng(37.5697279, 126.9722881),
+        level: 3
+      };
+      var map = new kakao.maps.Map(container, options);
+    });
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="flex-header">
+      <h1 class="logo"><a href="http://127.0.0.1:5500/index.html"><img src="./kr_coca_cola_logo.png"
+            alt="coca cola"></a></h1>
+      <nav>
+        <ul class="nav1">
+          <li><a href="https://www.coca-cola.com/kr/ko/brands">Brands</a></li>
+          <li><a href="https://www.coca-cola.com/kr/ko/about-us/our-company">Our Company</a></li>
+          <li><a href="https://www.coca-cola.com/kr/ko/offerings/brand-story">Discover</a></li>
+          <li><a href="https://www.coca-cola.com/kr/ko/sustainability">Impact</a></li>
+        </ul>
+      </nav>
+      <nav class="spot">
+        <ul>
+          <button aria-label="검색" class="nav-btn"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+              fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+          </button>
+          <button aria-label="마이페이지" class="nav-btn"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+              <path fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+            </svg>
+          </button>
+          <button aria-label="메뉴" class="nav-btn3"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+              fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+          </button>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="main-lay">
+      <div class="main-hero">
+        <img src="./hero.png" alt="코카-콜라 메인" class="hero">
+      </div>
+
+      <section>
+        <!-- 탭 메뉴 게시판 -->
+        <div class="container1">
+          <div class="tab_content">
+            <input type="radio" name="tabmenu" id="tab1" class="radioTrans" checked>
+            <label for="tab1">브랜드 스토리</label>
+            <input type="radio" name="tabmenu" id="tab2">
+            <label for="tab2">공지사항</label>
+            <input type="radio" name="tabmenu" id="tab3">
+            <label for="tab3">자료실</label>
+            <input type="radio" name="tabmenu" id="tab4">
+            <label for="tab4">자주 묻는 질문</label>
+            <div class="conbox con1">
+              <ul>
+                <li><a href="#">코카-콜라 병의 100여 년 역사</a></li>
+                <li><a href="#">빨간색은 어떻게 코카-콜라를 상징하는 컬러가 됐을까?</a></li>
+                <li><a href="#">136년 기록이 모여있는 코카-콜라 기록보관소</a></li>
+                <li><a href="#">코카-콜라를 처음 만든 존 펨버턴 박사</a></li>
+                <li><a href="#">우리가 알고 있는 산타클로스! 코카-콜라가 만들었다고?</a></li>
+              </ul>
+            </div>
+          
+            <div class="conbox con2">
+              <ul>
+                <li><a href="#">공지사항1</a></li>
+                <li><a href="#">공지사항2</a></li>
+                <li><a href="#">공지사항3</a></li>
+                <li><a href="#">공지사항4</a></li>
+                <li><a href="#">공지사항5</a></li>
+              </ul>
+            </div>
+          
+            <div class="conbox con3">
+              <ul>
+                <li><a href="#">자료1</a></li>
+                <li><a href="#">자료2</a></li>
+                <li><a href="#">자료3</a></li>
+                <li><a href="#">자료4</a></li>
+                <li><a href="#">자료5</a></li>
+              </ul>
+            </div>
+          
+            <div class="conbox con4">
+              <ul>
+                <li><a href="#">FAQ1</a></li>
+                <li><a href="#">FAQ2</a></li>
+                <li><a href="#">FAQ3</a></li>
+                <li><a href="#">FAQ4</a></li>
+                <li><a href="#">FAQ5</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Youtube -->
+          <div class="youtube-container">
+            <iframe src="https://www.youtube.com/embed/dvQ2bdAoaeg?si=LTZh0oYC1VGzpWGD"
+            title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container2">
+          <!-- 고객문의 -->
+          <div class="container3">
+            <div class="main-userinput">
+              <form action="">
+                <div class="user-id2">
+                  <h2>고객문의</h2>
+                  <table>
+                    <tr>
+                      <td class="tbl-txt">이름</td>
+                      <td class="tbl-input">
+                        <label for="userName"></label>
+                        <input type="text" id="userName" class="userInput">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tbl-txt">연락처</td>
+                      <td class="tbl-input">
+                        <label for="userPhone"></label>
+                        <input type="text" id="userPhone" class="userInput" placeholder="ex. 01012345678">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tbl-txt">이메일</td>
+                      <td class="tbl-input">
+                        <label for="userEmail"></label>
+                        <input type="text" id="userEmail" class="userInput" placeholder="ex. cocacola@example.com">
+                      </td>
+                    </tr>
+                    <tr class="chkHeight">
+                      <td class="tbl-txt">상담유형</td>
+                      <td class="tbl-input">
+                        <input type="checkbox" id="chk1">
+                        <label for="chk1">제품문의</label>
+                        <input type="checkbox" id="chk2">
+                        <label for="chk2">불만</label>
+                        <input type="checkbox" id="chk3">
+                        <label for="chk3">아이디어 제안</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tbl-txt">제목</td>
+                      <td class="tbl-input">
+                        <label for=""></label>
+                        <input type="text" id="" class="userInput">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tbl-txt">내용</td>
+                      <td class="tbl-input">
+                        <textarea type="text" id=""></textarea>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tbl-txt">비밀번호</td>
+                      <td class="tbl-input">
+                        <label for=""></label>
+                        <input type="password" id="" class="userInput">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        <input type="submit" value="제출하기" class="btn-submit">
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- 설문조사 -->
+          <div class="survey-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdhVYz6doJrPPOVniLYg4pnr8g-xL-Ays-n_3BIJueIXP6FEw/viewform?embedded=true" width="640" height="700" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- 지도 -->
+      <section class="container5">
+        <div class="container4">
+          <div>
+            <div id="map" style="width:500px; height:400px;"></div>
+          </div>
+          <div class="address">
+            <h2 class="customerTitle">고객 안내</h2>
+            <div class="addr-container">
+              <h2>주소</h2>
+              <p>서울특별시 종로구 새문안로 68 (신문로1가) 흥국생명빌딩 18층 한국 코카-콜라</p>
+            </div>
+            <div>
+              <h2>코카-콜라 음료(주) 고객상담실</h2>
+              <p>080-024-5999 (상담 시간: 월 ~ 금 09:00 ~ 17:30)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
+
